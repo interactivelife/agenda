@@ -13,7 +13,7 @@ const debug = createDebugger('agenda:schedule');
  * @param data data to send to job
  * @returns job or jobs created
  */
-export const schedule = function(this: Agenda, when: string, names: string[], data: object) {
+export const schedule = function(this: Agenda, when: string, names: string[], data: object, startDate: any, endDate: any, type: string) {
   const self = this;
 
   /**
@@ -24,7 +24,7 @@ export const schedule = function(this: Agenda, when: string, names: string[], da
    * @returns instance of new job
    */
   const createJob = async(when: string, name: string, data: object): Promise<Job> => {
-    const job = self.create(name, data);
+    const job = self.create(name, data, startDate, endDate, type);
 
     await job.schedule(when).save();
 

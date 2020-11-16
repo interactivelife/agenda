@@ -18,7 +18,7 @@ export const toJson = function(this: Job): Partial<JobAttributes> {
     }
   }
 
-  const dates = ['lastRunAt', 'lastFinishedAt', 'nextRunAt', 'failedAt', 'lockedAt'];
+  const dates = ['lastRunAt', 'lastFinishedAt', 'nextRunAt', 'failedAt', 'lockedAt', 'startRunsAt', 'noMoreAt'];
   dates.forEach(d => {
     // @ts-expect-error
     if (result[d]) {

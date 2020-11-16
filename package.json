@@ -49,7 +49,8 @@
     "debug": "~4.2.0",
     "human-interval": "~1.0.0",
     "moment-timezone": "~0.5.27",
-    "mongodb": "~3.6.2"
+    "mongodb": "~3.6.2",
+    "rrule": "^2.6.6"
   },
   "devDependencies": {
     "@types/cron": "^1.7.2",
@@ -74,7 +75,7 @@
     "q": "1.5.1",
     "sinon": "9.0.1",
     "typescript": "^4.0.3",
-    "xo": "0.27.2"
+    "xo": "^0.34.2"
   },
   "xo": {
     "space": 2,
